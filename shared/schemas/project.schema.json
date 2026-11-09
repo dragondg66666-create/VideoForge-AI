@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VideoForge Project Package",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "name",
+    "characters",
+    "scenes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "source_video": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "characters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "character_id",
+          "images"
+        ],
+        "properties": {
+          "character_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "images": {
+            "type": "array"
+          }
+        }
+      }
+    },
+    "scenes": {
+      "type": "array"
+    },
+    "analysis": {
+      "type": "object"
+    },
+    "preservation": {
+      "type": "object"
+    }
+  }
+}
